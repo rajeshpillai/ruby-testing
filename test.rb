@@ -15,6 +15,11 @@ driver.manage.window.maximize # maximize window
 # use xpath
 driver.find_element(:xpath, "//*[@id='hello1']").click
 
+# select option from dropdown
+dropdown = driver.find_element(:id, "options1")
+option = Selenium::WebDriver::Support::Select.new(dropdown)
+option.select_by(:value, 'b')
+
 sleep(5)  # sleep for 5 seconds
 
 
