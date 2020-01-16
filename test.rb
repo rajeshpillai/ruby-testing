@@ -8,7 +8,12 @@ driver.manage.window.maximize # maximize window
 
 # Find element and click
 
-driver.find_element(:id, 'hello1').click
+# driver.find_element(:id, 'hello1').click
+
+# driver.find_element(:name, 'helloworld').click
+
+# use xpath
+driver.find_element(:xpath, "//*[@id='hello1']").click
 
 sleep(5)  # sleep for 5 seconds
 
